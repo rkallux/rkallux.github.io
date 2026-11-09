@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Code | Rohan Kalluraya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Rohan Kalluraya</a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="silicon.html">Silicon</a></li>
+          <li><a href="code.html">Code</a></li>
+          <li><a href="off-the-clock.html">Off the Clock</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <p class="kicker">Code</p>
+      <h1>The real work behind it</h1>
+      <p class="lead">For technical readers who want to check the details. Each project links to its code.</p>
+    </section>
+
+    <section>
+      <div class="grid-2">
+        <div class="card">
+          <h3>MiniTPU</h3>
+          <div class="tags"><span class="tag">RTL</span><span class="tag">FPGA</span><span class="tag">ML hardware</span></div>
+          <p>A TPU-inspired accelerator stack built from my own RTL, targeting GPT-2 serving on an FPGA. Built in ECE 4950 AI Hardware.</p>
+          <p class="status">Status: architecture done, GPT-2 serving in progress</p>
+          <div class="links"><a href="#">GitHub</a></div>
+        </div>
+        <div class="card">
+          <h3>LPU performance simulator</h3>
+          <div class="tags"><span class="tag">Simulation</span><span class="tag">Architecture</span></div>
+          <p>My M.Eng project: a performance simulator inspired by Groq's LPU chip, with a DRAM extension, built with two teammates.</p>
+          <div class="links"><a href="#">GitHub</a></div>
+        </div>
+        <div class="card">
+          <h3>Verification testbenches</h3>
+          <div class="tags"><span class="tag">SystemVerilog</span><span class="tag">UVM</span></div>
+          <p>Testbench code from verifying the C2S2 SoC.</p>
+          <div class="links"><a href="#">GitHub</a></div>
+        </div>
+        <div class="card">
+          <h3>Mergesort hardware accelerator</h3>
+          <div class="tags"><span class="tag">Bluespec</span><span class="tag">AXI4</span><span class="tag">RISC-V</span></div>
+          <p>A hardware sorter connected to a Flute RISC-V core over AXI4. About 8x faster than sorting in software on 64K-element arrays.</p>
+          <div class="links"><a href="#">GitHub</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>Rohan Kalluraya, Cornell ECE</span>
+      <span><a href="mailto:rak298@cornell.edu">rak298@cornell.edu</a> · <a href="https://www.linkedin.com/in/rohankall" target="_blank" rel="noopener">LinkedIn</a></span>
+    </div>
+  </footer>
+  <script src="site.js"></script>
+</body>
+</html>
