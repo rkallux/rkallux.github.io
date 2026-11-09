@@ -28,35 +28,30 @@
   <main class="wrap">
     <section>
       <p class="kicker">Silicon</p>
-      <h1>Verifying a chip that came back from TSMC</h1>
-      <p class="lead">Most college students never get to test a chip they helped build. On Cornell Custom Silicon Systems (C2S2), I lead the verification subteam, and our SoC was fabricated at TSMC and tested on real silicon.</p>
+      <h1>Verifying our C2S2 chip</h1>
+      <p class="lead">I lead the verification subteam on Cornell Custom Silicon Systems (C2S2). Our SoC was fabricated at TSMC, and after it came back we tested it on the real silicon.</p>
     </section>
 
     <section>
-      <h2>The story in three steps</h2>
+      <h2>How it went</h2>
       <ol class="story">
-        <li><h3>One SoC, two brains</h3>A RISC-V core and a 4x4 systolic array share one chip, connected through a memory crossbar to on-chip SRAM. <a href="index.html#soc">See the interactive diagram.</a></li>
-        <li><h3>I ran verification at the full-SoC level</h3>Instead of only testing parts one at a time, I checked that the whole chip works together the way the design says it should.</li>
-        <li><h3>Then we checked it on real silicon</h3>Once the chip came back from TSMC, we loaded programs onto it over SPI and compared what the real chip did against what we expected.</li>
+        <li><h3>The chip</h3>It has a RISC-V core and a 4x4 systolic array, connected through a memory crossbar to on-chip SRAM. The <a href="index.html#soc">interactive diagram</a> is on the Home page.</li>
+        <li><h3>Full-chip verification</h3>I ran verification at the full SoC level, checking that all the blocks work correctly together and match the design spec.</li>
+        <li><h3>Testing the real chip</h3>Once the chip came back from TSMC, we loaded programs onto it over SPI and compared what the real chip did against what we expected.</li>
       </ol>
     </section>
 
     <section id="demo">
-      <h2>One-minute chip demo</h2>
+      <h2>Post-silicon validation demo</h2>
       <div class="video">
         <video controls preload="metadata">
           <source src="Rohan_Website_Video_1.mp4" type="video/mp4">
-          <!-- <track kind="captions" src="media/chip-demo.vtt" srclang="en" label="English" default> -->
-          Your browser can't play this video.
+          This video can't play in this browser.
         </video>
         <!-- Option B: if you upload to YouTube (unlisted), delete the video tag above and use:
         <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="C2S2 chip demo" allowfullscreen></iframe>
         -->
       </div>
-      <details class="transcript">
-        <summary>Read the transcript</summary>
-        <p>[Paste your video script here so people can read it without sound.]</p>
-      </details>
     </section>
 
     <section>
@@ -79,11 +74,11 @@
     </section>
 
     <section>
-      <h2>Where else I've done this</h2>
+      <h2>Other experience</h2>
       <div class="grid-3">
-        <div class="card"><h3>Marvell Technology</h3><p class="muted">Design Verification Intern</p><p>DV infrastructure work on a professional verification team.</p></div>
-        <div class="card"><h3>Ambient</h3><p class="muted">RTL Design Intern</p><p>Writing the hardware, not just testing it.</p></div>
-        <div class="card"><h3>Cornell ECE 2300</h3><p class="muted">Teaching Assistant</p><p>TA'd digital logic and computer organization with Prof. Batten and helped redesign the course labs.</p></div>
+        <div class="card"><h3>Marvell Technology</h3><p class="muted">Design Verification Intern</p><p>Worked on DV infrastructure.</p></div>
+        <div class="card"><h3>Ambient</h3><p class="muted">RTL Design Intern</p><p>Worked on RTL design.</p></div>
+        <div class="card"><h3>Cornell ECE 2300</h3><p class="muted">Teaching Assistant</p><p>TA'd ECE 2300 with Prof. Batten and helped redesign the course labs.</p></div>
       </div>
     </section>
   </main>

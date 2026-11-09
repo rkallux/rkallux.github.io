@@ -5,10 +5,11 @@
     if (a.getAttribute("href") === page) a.classList.add("active");
   });
 
-  // If a photo file isn't added yet, hide the broken image so the label shows instead
+  // If a photo file isn't uploaded yet, hide that photo spot completely
   document.querySelectorAll(".photo img").forEach(function (img) {
-    img.addEventListener("error", function () { img.remove(); });
-    if (img.complete && img.naturalWidth === 0) img.remove();
+    function hide() { var box = img.closest(".photo"); if (box) box.remove(); }
+    img.addEventListener("error", hide);
+    if (img.complete && img.naturalWidth === 0) hide();
   });
 })();
 
@@ -17,32 +18,26 @@
   var svg = document.getElementById("soc-svg");
   if (!svg) return;
 
-  // EDIT the "verified" lines with what you actually checked on each block
   var info = {
     core: {
       name: "RISC-V core",
-      what: "A small processor that runs the program. It tells the accelerator what to work on and moves data between memory and the array.",
-      verified: "[Add one line: what you checked on the core at the SoC level]"
+      what: "A small processor that runs the program. It tells the accelerator what to work on and moves data between memory and the array."
     },
     array: {
       name: "4x4 systolic array",
-      what: "A grid of 16 multiply-accumulate units. Each one passes data to its neighbor every clock cycle, so the grid does matrix math fast. It's the same idea behind Google's TPU and it's what ML workloads lean on.",
-      verified: "[Add one line: what you checked on the array]"
+      what: "A grid of 16 multiply-accumulate units. Each one passes data to its neighbor every clock cycle, so the grid does matrix math fast. It's the same idea behind Google's TPU and it's what ML workloads lean on."
     },
     xbar: {
       name: "Memory crossbar",
-      what: "A switch that connects the core and the array to memory, so both can read and write without getting in each other's way.",
-      verified: "[Add one line: what you checked on the crossbar]"
+      what: "A switch that connects the core and the array to memory, so both can read and write without getting in each other's way."
     },
     sram: {
       name: "SRAM (on-chip memory)",
-      what: "Fast memory built into the chip. It holds the program and the data the core and array work on.",
-      verified: "[Add one line: what you checked on the SRAM]"
+      what: "Fast memory built into the chip. It holds the program and the data the core and array work on."
     },
     spi: {
       name: "SPI (the chip's link to the outside)",
-      what: "A simple serial connection. We use it to load programs onto the chip and read results back, which is how we tested the real silicon on the board.",
-      verified: "[Add one line: what you checked over SPI / in silicon bring-up]"
+      what: "A simple serial connection. We use it to load programs onto the chip and read results back, which is how we tested the real silicon on the board."
     }
   };
 
@@ -58,8 +53,7 @@
     var d = info[id];
     panel.innerHTML =
       "<h3>" + d.name + "</h3>" +
-      '<p class="label">What it does</p><p>' + d.what + "</p>" +
-      '<p class="label">What I verified</p><p>' + d.verified + "</p>";
+      '<p class="label">What it does</p><p>' + d.what + "</p>";
   }
 
   blocks.forEach(function (b) {
